@@ -1,0 +1,211 @@
+{% extends 'layouts/layout-prototype.nunjucks' %}
+
+{% block content %}
+<div class="sections-md-row hero hero--md-fullHeider" id="about" data-scrolled-section="styleAnim" style="background-color: black;">    
+    <section class="section section--resize-l orderTop flex flex-column justify-center hero hero--fullHeight hero--maxScale400 hero--lg-fullHeider hero--md-maxScaleNone styleAnim-translateInUp" data-theme="black" data-styleAnim-order="1">        
+        <div class="section__inner container--adaptive-md">
+            <div class="text-component margin-x-auto  text-center text-left-md flex flex-column justify-center" style="max-width: 350px;">
+                
+                <h3 class="font-weight-light text-sm margin-bottom-xs styleAnim-translateIn styleAnim-translateOutDown" style="color:var(--color-contrast-medium);" data-styleAnim-order="6">The process</h3>
+                <h1 class='text--xxxl margin-none styleAnim-scaleInUp' data-styleAnim-order="2">
+                    Going the <br>Extra Mile
+                </h1>
+            </div>
+        </div>
+        
+        <div class="section__inner container--adaptive-md margin-top-md padding-left-md">
+            <div class="text-component sizeMax-300 margin-x-auto  text-center text-left-md">
+                <p class="styleAnim-translateInUp" data-styleAnim-order="3">
+                    Enabling my capacity in Creative Industry for Tomorrow     
+                </p>   
+
+                  <a href="#mission" class="" data-hover>
+                    scroll
+                </a>
+            </div>
+        </div>      
+    </section>
+    
+    <section class="section section--resize-r styleAnim-translateInUp" data-theme="black" data-styleAnim-order="1">  
+        <div class="container pack pack--bottom padding-y-xl height-100% padding-x-md hide display--md">
+            <div class="bg-img__element about__image  styleAnim-translateInLeft" data-styleAnim-order="1" style="z-index: 2;">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 355.384 533.076" style="enable-background:new 0 0 355.384 533.076;" xml:space="preserve">
+                    <g>
+                        <path class="st0" d="M355.384,1.198C213.23,1.77,142.154,0.447,0,1.176C0,0.71,0,0.475,0,0c142.154,0,213.23,0,355.384,0
+                        C355.384,0.475,355.384,0.715,355.384,1.198z"/>
+                        <path class="st0" d="M355.384,20.55C213.23,24.868,142.154,10.365,0,15.864c0-0.498,0-0.749,0-1.259
+                        c142.154-5.444,213.23,8.202,355.384,3.928C355.384,19.335,355.384,19.739,355.384,20.55z"/>
+                        <path class="st0" d="M355.384,42.361C213.23,44.525,142.154,24.666,0,27.422c0-0.538,0-0.809,0-1.355
+                        c142.154-3.346,213.23,16.093,355.384,13.466C355.384,40.661,355.384,41.227,355.384,42.361z"/>
+                        <path class="st0" d="M355.384,65.013C213.23,63.005,142.154,40.466,0,37.909c0-0.658,0-0.984,0-1.634
+                        C142.154,38.04,213.23,60.133,355.384,61.52C355.384,62.92,355.384,63.619,355.384,65.013z"/>
+                        <path class="st0" d="M355.384,86.889C213.23,82.57,142.154,54.884,0,49.383c0-0.928,0-1.381,0-2.271
+                        C142.154,52.475,213.23,78.8,355.384,83.01C355.384,84.576,355.384,85.353,355.384,86.889z"/>
+                        <path class="st0" d="M355.384,106.373C213.23,105.484,142.154,65.037,0,63.904c0-1.418,0-2.104,0-3.435
+                        c142.154,2.915,213.23,39.765,355.384,42.054C355.384,104.097,355.384,104.868,355.384,106.373z"/>
+                        <path class="st0" d="M355.384,124.198C213.23,125.619,142.154,88.386,0,83.045c0-2.044,0-3.046,0-5.003
+                        c142.154,4.7,213.23,43.02,355.384,41.768C355.384,121.554,355.384,122.431,355.384,124.198z"/>
+                        <path class="st0" d="M355.384,142.919C213.23,143.871,142.154,109.258,0,105.683c0-2.553,0-3.82,0-6.323
+                        c142.154,4.596,213.23,39.681,355.384,38.458C355.384,139.851,355.384,140.872,355.384,142.919z"/>
+                        <path class="st0" d="M355.384,162.024C213.23,161.587,142.154,128.116,0,129.758c0-2.873,0-4.317,0-7.201
+                        c142.154-0.02,213.23,33.762,355.384,33.767C355.384,158.605,355.384,159.746,355.384,162.024z"/>
+                        <path class="st0" d="M355.384,180.963C213.23,179.534,142.154,147.844,0,153.213c0-2.934,0-4.432,0-7.466
+                        c142.154-4.619,213.23,27.853,355.384,29.082C355.384,177.296,355.384,178.524,355.384,180.963z"/>
+                        <path class="st0" d="M355.384,199.189C213.23,198.48,142.154,171.323,0,173.988c0-2.664,0-4.059,0-6.944
+                        c142.154-4.673,213.23,24.543,355.384,25.787C355.384,195.403,355.384,196.676,355.384,199.189z"/>
+                        <path class="st0" d="M355.384,215.255C213.23,210.086,142.154,201.13,0,193.427c0-3.445,0-5.084,0-8.136
+                        c142.154,4.647,213.23,21.206,355.384,24.324C355.384,212.007,355.384,213.127,355.384,215.255z"/>
+                        <path class="st0" d="M355.384,227.443C213.23,222.938,142.154,225.061,0,218.348c0-4.435,0-6.612,0-10.809
+                        c142.154,8.385,213.23,9.601,355.384,15.228C355.384,224.723,355.384,225.647,355.384,227.443z"/>
+                        <path class="st0" d="M355.384,237.732c-142.154,0.714-213.23,7.3-355.384,8.365c0-4.957,0-7.453,0-12.386
+                        c142.154,2.708,213.23-2.241,355.384-0.424C355.384,235.08,355.384,235.956,355.384,237.732z"/>
+                        <path class="st0" d="M355.384,248.289C213.23,253.582,142.154,265.562,0,273.449c0-4.901,0-7.443,0-12.597
+                        c142.154-5.292,213.23-14.142,355.384-17.694C355.384,245.133,355.384,246.144,355.384,248.289z"/>
+                        <path class="st0" d="M355.384,261.278C213.23,265.312,142.154,291.164,0,297.176c0-4.156,0-6.417,0-11.174
+                        c142.154-8.518,213.23-25.922,355.384-31.639C355.384,256.936,355.384,258.301,355.384,261.278z"/>
+                        <path class="st0" d="M355.384,278.008c-142.154,0-213.23,29.632-355.384,36.211c0-2.805,0-4.375,0-8.011
+                        c142.154-0.123,213.23-37.321,355.384-37.321C355.384,272.535,355.384,274.359,355.384,278.008z"/>
+                        <path class="st0" d="M355.384,295.309c-142.154,0-213.23,21.824-355.384,29.432c0-1.842,0-2.85,0-5.223
+                        c142.154-8.539,213.23-33.827,355.384-33.827C355.384,289.539,355.384,291.462,355.384,295.309z"/>
+                        <path class="st0" d="M355.384,312.61c-142.154,0-213.23,18.779-355.384,19.252c0-1.518,0-2.262,0-3.934
+                        c142.154-5.192,213.23-25.431,355.384-25.431C355.384,306.542,355.384,308.565,355.384,312.61z"/>
+                        <path class="st0" d="M355.384,329.912c-142.154,0-213.23,15.981-355.384,8.895c0-1.945,0-2.778,0-4.414
+                        c142.154,2.825,213.23-15.09,355.384-15.09C355.384,323.546,355.384,325.668,355.384,329.912z"/>
+                        <path class="st0" d="M355.384,347.213c-142.154,0-213.23,8.914-355.384,1.587c0-3.233,0-4.563,0-6.932
+                        c142.154,8.416,213.23-5.759,355.384-5.759C355.384,340.55,355.384,342.771,355.384,347.213z"/>
+                        <path class="st0" d="M355.384,364.079C213.23,359.826,142.154,372.556,0,364.95c0-5.281,0-7.662,0-11.641
+                        c142.154,4.486,213.23-0.396,355.384-0.396C355.384,357.554,355.384,360.078,355.384,364.079z"/>
+                        <path class="st0" d="M355.384,376.366C213.23,369.279,142.154,399.957,0,387.285c0-6.856,0-10.148,0-16.142
+                        c142.154,11.381,213.23-9.208,355.384-2.842C355.384,371.987,355.384,373.537,355.384,376.366z"/>
+                        <path class="st0" d="M355.384,385.235C213.23,383.518,142.154,416.122,0,413.052c0-7.731,0-11.597,0-18.976
+                        c142.154,11.012,213.23-21.232,355.384-15.074C355.384,381.706,355.384,382.881,355.384,385.235z"/>
+                        <path class="st0" d="M355.384,393.457C213.23,398.66,142.154,430.164,0,439.466c0-7.81,0-11.877,0-19.935
+                        c142.154-0.142,213.23-32.261,355.384-32.341C355.384,389.614,355.384,390.787,355.384,393.457z"/>
+                        <path class="st0" d="M355.384,403.807C213.23,410.824,142.154,451.199,0,463.746c0-6.998,0-10.846,0-18.787
+                        c142.154-11.176,213.23-43.301,355.384-49.551C355.384,398.342,355.384,399.933,355.384,403.807z"/>
+                        <path class="st0" d="M355.384,419.052C213.23,421.433,142.154,478.854,0,483.112c0-5.228,0-8.365,0-15.305
+                        c142.154-11.185,213.23-55.359,355.384-61.614C355.384,410.522,355.384,413.018,355.384,419.052z"/>
+                        <path class="st0" d="M355.384,440.468C213.23,447.842,142.154,483.097,0,496.282c0-3.62,0-5.654,0-10.721
+                        c142.154-7.263,213.23-59.445,355.384-63.507C355.384,428.643,355.384,432.436,355.384,440.468z"/>
+                        <path class="st0" d="M355.384,465.796C213.23,468.774,142.154,500.201,0,505.526c0-2.86,0-4.315,0-7.89
+                        c142.154-12.863,213.23-46.87,355.384-54.064C355.384,452.044,355.384,456.611,355.384,465.796z"/>
+                        <path class="st0" d="M355.384,492.264C213.23,488.111,142.154,521.05,0,513.625c0-3.043,0-4.364,0-7.282
+                        c142.154-4.071,213.23-35.623,355.384-37.899C355.384,477.967,355.384,482.865,355.384,492.264z"/>
+                        <path class="st0" d="M355.384,517.098C213.23,509.735,142.154,536.53,0,523.364c0-4.266,0-5.943,0-9.13
+                        c142.154,8.21,213.23-24.698,355.384-20.106C355.384,503.78,355.384,508.522,355.384,517.098z"/>
+                        <path class="st0" d="M355.384,533.076c-142.154,0-213.23,0-355.384,0c0-6.623,0-9.194,0-13.665
+                        c140.265,12.901,211.904-13.157,355.384-5.776C355.384,522.402,355.384,526.453,355.384,533.076z"/>
+                    </g>
+                </svg>                
+            </div>
+        </div>
+    </section>
+</div> 
+
+<div class="sections-md-row" id="sub-header" data-scrolled-section="subheader-sticky">
+    <section class="section" data-theme="dark" data-styleAnim-order="1">
+        <div class="section__inner container--adaptive-md">
+            <nav class="s-tabs">
+                <ul class="s-tabs__list">
+                    <li><a href="#about" id="target-about" >About</a></li>
+                    <li><a href="#services" id="target-services" >Expertise</a></li>
+                    <li><a href="#mission" id="target-mission" >Mission</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</div> 
+
+<div class="sections-md-row hero hero--lg-fullHeider hero--md-maxScale1000"  id="mission" data-scrolled-section="styleAnim">
+    <section class="section section--resize-l  styleAnim-translateInRight styleAnim-translateOutRight" data-theme="dark" data-styleAnim-order="1">                      
+        <div class="section__inner container--adaptive-md padding-y-xl height-100%">
+            <div class="pack pack--middle height-100% ">
+                <div class="pack__item">
+                    
+                    <div class="text-component">
+                        <div class="sizeMax-500">
+                            
+                            <h1 class="styleAnim-translateInUp styleAnim-translateOutDown" data-styleAnim-order="2">Shaping destiny</h1>
+                            <div class="styleAnim-translateInUp styleAnim-translateOutDown"  data-styleAnim-order="3">
+                                
+                                <p class="margin-none"> 
+                                    My ultimate goal is what I find most compelling: Discovering my true essence in the Creative Industry and giving advice or inspiring others to become more interactive and successful.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section--resize-r styleAnim-translateInLeft styleAnim-translateOutLeft" data-theme="dark" data-styleAnim-order="1"> </section>
+</div>  
+
+<div class="sections-md-row hero hero--md-fullHeider hero--md-maxScale1000" id="services" data-scrolled-section="styleAnim">
+    <section class="section section--resize-l flex flex-column justify-center styleAnim-translateInLeft styleAnim-translateOutLeft" data-theme="black" data-styleAnim-order="1">
+        <div class="section__line section__line--left styleAnim-translateInLeft" style="background-color:var(--color-accent)" data-styleAnim-order="2"></div>        
+        
+        
+        <div class="section__inner container--adaptive-md padding-y-xl ">
+            <div class="text-component">
+                
+                <div class="sizeMax-500">
+                    
+                    <h1 class="styleAnim-translateInUp styleAnim-translateOutDown" data-styleAnim-order="2">Expertise <br>through better user experiences</h1>
+                    <p class="styleAnim-translateInUp" data-styleAnim-order="3">                    
+                        My expanding specialism is to help you moving fast forward in online growths or building digital products.
+                    </p>       
+                </div>           
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section--resize-r styleAnim-translateInRight styleAnim-translateOutRight" data-theme="black" data-styleAnim-order="1">      
+        
+        <div class="section__inner  container--adaptive-md  height-100% padding-y-xl">
+            <div class="pack pack--middle height-100%  component">
+                <div class="pack__item">    
+                    <ul class="flex flex--wrap grid-gap--none flex--center-y push-left--md">
+                        <li class="sizeMax-400 card card--is-link card--shadow styleAnim-translateInUp styleAnim-translateOutDown" data-styleAnim-order="3" data-theme="dark">
+                            <a class="pack pack--middle clearTextLine card__link">
+                                <div class="pack__item size--1/3">
+                                    <figure class="orderTop">
+                                        
+                                        <div class="ratio">
+                                            <div class="bg-img__element flex flex--center">
+                                                <span class="hex-icon-sun">
+                                                    <svg>
+                                                        <path d="M19,1 Q21,0,23,1 L39,10 Q41.5,11,42,14 L42,36 Q41.5,39,39,40 L23,49 Q21,50,19,49 L3,40 Q0.5,39,0,36 L0,14 Q0.5,11,3,10 L19,1" />
+                                                        <circle cx="21" cy="25" r="8" />
+                                                        <circle cx="21" cy="25" r="12">
+                                                            <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 21 25" to="360 21 25" dur="3.5s" repeatCount="indefinite" />
+                                                        </circle>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                                
+                                <div class="pack__item text-component text--sm padding--md">
+                                    
+                                    <h3 class=" text--sm">Web Development</h3>
+                                    
+                                    <p class="text--subtle text--sm text-capitalize">
+                                        Page coming soon
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div> 
+
+
+<script src="../js/scrollAnimation1.js"></script>
+{% endblock %}   

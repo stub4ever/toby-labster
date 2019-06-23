@@ -1,0 +1,39 @@
+/////////////////////////
+//
+// TRUMPS.THEMES
+//
+//
+/////////////////////////
+
+
+// DARK
+[data-theme="dark"] .section__line--top,
+[data-theme="dark"] .section__line--right,
+[data-theme="dark"] .section__line--bottom,
+[data-theme="dark"] .section__line--left {
+    background-color: var(--color-black);
+}
+
+// BLACK
+[data-theme="black"] .section__line--top,
+[data-theme="black"] .section__line--right,
+[data-theme="black"] .section__line--bottom,
+[data-theme="black"] .section__line--left {
+    background-color: var(--color-accent);
+}
+
+// WHITE
+[data-theme="white"] .section__line--top,
+[data-theme="white"] .section__line--right,
+[data-theme="white"] .section__line--bottom,
+[data-theme="white"] .section__line--left {
+}
+
+
+// PRIMARY
+[data-theme="primary"] .section__line--top,
+[data-theme="primary"] .section__line--right,
+[data-theme="primary"] .section__line--bottom,
+[data-theme="primary"] .section__line--left {
+    background-color: var(--color-primary-light);
+}

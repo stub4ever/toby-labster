@@ -1,0 +1,61 @@
+@import '../2-tools/mixins/font-face';
+
+// --------------------------------
+
+// (START) Global Editor code https://codyhouse.co/ds/globals/typography
+
+// --------------------------------
+
+:root {
+    // font family
+    --font-primary: 'IBM Plex Sans', sans-serif;
+    --font-secondary: 'IBM Plex Sans', sans-serif;
+    
+    // body font size
+    --text-base-size: 1.2em;
+    
+    // type scale
+    --text-scale-ratio: 1.2;
+    --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+    --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+    
+    // line-height
+    --body-line-height: 1.45;
+    --heading-line-height: 1.1;
+    
+    // capital letters - used in combo with the lhCrop mixin
+    --font-primary-capital-letter: .85;
+    --font-secondary-capital-letter: 1;
+
+    --text-spacing: 0;
+}
+
+
+@supports(--css: variables) {
+    :root {
+        @include breakpoint(md) {
+            --text-base-size: 1.25em;
+            --text-scale-ratio: 1.25;
+        }
+    }
+}
+
+
+// --------------------------------
+
+// (END) Global Editor Code
+
+// --------------------------------
+
+
+// Add fonts resources
+// @include font-face("CircularStd", "../fonts/CircularStd-Book", 300, normal, eot woff2 woff);   
+// // @include font-face("CircularStd", "../fonts/CircularStd-Medium", 400, normal, eot woff2 woff);   
+// @include font-face("CircularStd", "../fonts/CircularStd-Bold", 700, normal, eot woff2 woff);   
+// @include font-face("Nimbus-SansBEx", "../fonts/Nimbus-Sans-D-OT-Bold-Extended_32745", 700, normal, eot woff2 woff);   

@@ -1,0 +1,66 @@
+{
+    "root": {
+        "dev": "./source",
+        "dist": "dist"
+    },
+    "html": {
+        "dev": "html",
+        "dist": "./",
+        "parts": "templates",
+        "run": true
+    },
+    "css": {
+        "dev": "scss",
+        "dist": "css",
+        "parts": "project",
+        "extensions": "*.+(css|scss)",
+        "uncss": true
+    },
+    "js": {
+        "dev": "js",
+        "dist": "js",
+        "parts": "modules",
+        "extensions": [".json", ".js"]
+    },
+    "img": {
+        "dev": "img/**/",
+        "dist": "img",
+        "extensions": "*.+(jpg|jpeg|gif|png|svg)"
+    },
+    "svg": {
+        "dev": "img/svg",
+        "dist": "img"
+    },
+    "video": {
+        "dev": "video",
+        "dist": "video",
+        "extensions": "*.+(mp4|wav|mov)"
+    },
+    "fonts": {
+        "dev": "fonts",
+        "dist": "fonts",
+        "extensions": "*.+(woff2|woff|eot|ttf|svg)"
+    },
+    "static": {
+        "dev": "static",
+        "dist": "static"
+    },
+    "deploy": {
+        "hostname": "",
+        "username": "",
+        "path": "/",
+        "password": ""
+    },
+    "browserSync": {
+        "port": 3333,
+        "proxy": {
+            "target": "",
+            "publicPath" : "",
+            "files": [
+                "../*.php",
+                "../*.html",
+                "../*.md"
+            ]
+        }
+    }
+}

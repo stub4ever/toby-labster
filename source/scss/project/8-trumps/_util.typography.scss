@@ -1,0 +1,81 @@
+// --------------------------------
+
+// Typography
+
+// --------------------------------
+
+.truncate, .text-truncate { // truncate text if it exceeds its parent
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-replace { // replace text with img
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+// text alignment
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+@include breakpoint(xs) {
+    .text-center\@xs { text-align: center; }
+    .text-left\@xs   { text-align: left; }
+    .text-right\@xs  { text-align: right; }
+}
+
+@include breakpoint(sm) {
+    .text-center\@sm { text-align: center; }
+    .text-left\@sm   { text-align: left; }
+    .text-right\@sm  { text-align: right; }
+}
+
+@include breakpoint(md) {
+    .text-center\@md { text-align: center; }
+    .text-left\@md   { text-align: left; }
+    .text-right\@md  { text-align: right; }
+}
+
+@include breakpoint(lg) {
+    .text-center\@lg { text-align: center; }
+    .text-left\@lg   { text-align: left; }
+    .text-right\@lg  { text-align: right; }
+}
+
+@include breakpoint(xl) {
+    .text-center\@xl { text-align: center; }
+    .text-left\@xl   { text-align: left; }
+    .text-right\@xl  { text-align: right; }
+}
+
+
+// Alignment
+.text-justify  { text-align: justify; }
+.text-nowrap   { white-space: nowrap; }
+
+// font family
+.font-primary { font-family: var(--font-primary); }
+.font-secondary { font-family: var(--font-secondary); }
+
+// Transformation
+.text-lowercase  { text-transform: lowercase; }
+.text-uppercase  { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+
+// Weight and italics
+.font-weight-light  { font-weight: 300; }
+.font-weight-normal { font-weight: 400; }
+.font-weight-bold   { font-weight: 700; }
+.font-italic        { font-style: italic; }
+
+// text letter-spacing
+.text-tight-1 { letter-spacing: -0.025em;; }
+.text-tight-2 { letter-spacing: -0.05em;; }
+.text-mega-1 { letter-spacing: 0.125em;; }
+.text-mega-2 { letter-spacing: 0.25em;; }
+
+.text-decoration-none { text-decoration: none; }

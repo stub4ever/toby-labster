@@ -1,0 +1,18 @@
+{% extends 'layouts/layout-prototype.nunjucks' %}
+
+{% block content %}
+
+<section class="section">
+    <div class="section__inner padding">
+        <div class="text-component">
+            <ol>
+                <li>
+                    <a href="../prototypes/scroll-animation.html">Scroll Animation</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<script src="../js/scripts.js"></script>
+{% endblock %}   

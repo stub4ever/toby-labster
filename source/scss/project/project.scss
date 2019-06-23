@@ -1,0 +1,141 @@
+@charset 'utf-8';
+
+
+// ==========================================================================
+// SETTINGS - 
+// The preprocessor variables are the globally-available
+// settings or configuration switches for our project.
+// ==========================================================================
+
+
+// CORE - Update: 20/06/2019 ----------------------------
+@import 'project/1-settings/setting.colors';
+@import 'project/1-settings/setting.typography';
+@import 'project/1-settings/setting.spacing';
+@import 'project/1-settings/setting.shared-styles';
+@import 'project/1-settings/setting.icons';
+@import 'project/1-settings/setting.grid-layout';
+@import 'project/1-settings/setting.breakpoints';
+@import 'project/1-settings/setting.z-index'; 
+// ------------------------------------------------------
+
+
+// // ==========================================================================
+// // TOOLS -    
+// // Includes all the public mixins and helper functions. 
+// // These globally-available tools should make our development flow easier.
+// // ==========================================================================
+
+// CORE - Update: 20/06/2019 ----------------------------
+@import 'project/2-tools/mixins/font-face'; 
+@import 'project/2-tools/mixins/colors'; 
+@import 'project/2-tools/mixins/gradient'; 
+
+@import 'project/2-tools/mixins';    
+
+@import 'project/2-tools/styleAnim';  // Optional Animation tool
+@import 'project/2-tools/styleguide'; // Optional Styleguide
+// ------------------------------------------------------
+@import 'project/2-tools/2-tools';  // IMPORT NEW CUSTOM FILE INSIDE HERE
+
+
+// // ==========================================================================
+// // GENERIC -  
+// // The ground zero styles. They are low-specificity and far reaching.
+// // Think about resets and normalizing our styles for cross-browser compatibility.
+// // ==========================================================================
+
+
+// CORE - Update: 20/06/2019 ----------------------------
+@import 'project/3-generic/reset';
+// ------------------------------------------------------
+@import 'project/3-generic/3-generic';  // IMPORT NEW CUSTOM FILE INSIDE HERE
+
+
+// // // ==========================================================================
+// // // BASE -
+// // // Unclassed HTML elements. This is the last layer where we use type selectors.
+// // // Anything necessary to style raw elements goes in here. It doesn’t include any class or ID selectors. It is defining the default
+// // // styling for how that element should look in all occurrences on the page.
+// // // ==========================================================================
+
+// CORE - Update: 20/06/2019 ----------------------------
+@import 'project/4-base/typography';
+@import 'project/4-base/buttons';
+@import 'project/4-base/accessiblity';
+@import 'project/4-base/forms';
+@import 'project/4-base/icons';
+
+// ------------------------------------------------------
+@import 'project/4-base/4-base'; // IMPORT NEW CUSTOM FILE INSIDE HERE
+
+
+// // // ==========================================================================
+// // // OBJECTS -
+// // // Object oriented CSS. Begin using classes exclusively for agnostically named
+// // // noncosmetic design patterns. This layer is mostly layout-driven.
+// // // ==========================================================================
+
+// CORE - Update: 20/06/2019 ----------------------------
+@import 'project/5-objects/section';
+@import 'project/5-objects/box';
+@import 'project/5-objects/flag';
+@import 'project/5-objects/crop';
+@import 'project/5-objects/list-inline';
+@import 'project/5-objects/ratio';
+@import 'project/5-objects/media';
+@import 'project/5-objects/pack';
+@import 'project/5-objects/bg-wrapper';
+@import 'project/5-objects/media-wrapper';
+
+// ------------------------------------------------------
+@import 'project/5-objects/5-objects'; // IMPORT NEW CUSTOM FILE INSIDE HERE
+
+
+// // ==========================================================================
+// // COMPONENTS -
+// // Explicitly named designed pieces of UI. The cosmetic layer,
+// // includes more specific styling instructions.
+// // ==========================================================================
+
+// CORE - Update: 20/06/2019 ----------------------------
+
+// ------------------------------------------------------
+@import 'project/6-components/6-components';  // IMPORT NEW CUSTOM FILE INSIDE HERE
+
+
+// // ==========================================================================
+// // SCOPES - 
+// // Consists out of components grouped together. They rely entirely on nesting,
+// // so make sure people are aware of this.
+// // ==========================================================================
+
+// CORE - Update: 20/06/2019 ----------------------------
+
+// ------------------------------------------------------
+@import 'project/7-scopes/7-scopes';  // IMPORT NEW CUSTOM FILE INSIDE HERE
+
+
+// // ==========================================================================
+// // TRUMPS -
+// // Only affect one piece of the DOM at a time. These are the utility classes
+// // or overrides and usually carry !important.
+// // ==========================================================================
+
+// CORE - Update: 20/06/2019 ----------------------------
+@import 'project/8-trumps/util.colors';
+@import 'project/8-trumps/util.typography';
+@import 'project/8-trumps/util.sizing';
+@import 'project/8-trumps/util.spacing';
+@import 'project/8-trumps/util.alignment';
+@import 'project/8-trumps/util.visibility';
+@import 'project/8-trumps/util.shared-styles'; // Add Custom utilities here
+
+
+@import 'project/8-trumps/themes'; // Create layouts theme-color here
+@import 'project/8-trumps/overrides'; // if necessary to overrides classes here
+// ------------------------------------------------------
+@import 'project/8-trumps/8-trumps';
+@import 'project/8-trumps/print'; // Print styling always at the end
+
+

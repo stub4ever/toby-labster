@@ -1,0 +1,33 @@
+/////////////////////////
+//
+// Utilities
+//
+// - Set very specific rules classes
+//
+/////////////////////////
+
+
+/////////////////////////
+
+// Shadow 
+
+/////////////////////////
+
+.shadow-top { box-shadow: 0 -15px 15px -15px rgba(#000, .15)!important; }
+.shadow-right { box-shadow: 15px 0 15px -15px rgba(#000, .15)!important; }
+.shadow-bottom { box-shadow: 0 15px 15px -15px rgba(#000, .15)!important; }
+.shadow-left { box-shadow: -15px 0 15px -15px rgba(#000, .15)!important; }
+.shadow-all { box-shadow: 0 0 15px rgba(#000, .15)!important; } 
+
+
+// Images
+.filter-gray { filter: grayscale(100%); }
+
+// Elements
+.overflow-hidden { overflow: hidden; }
+.overflow-visible { overflow: visible; }
+
+.order-top { position: relative; z-index:1; }
+.display-block { display: block; }
+.display-inline { display: inline; }
+

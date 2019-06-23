@@ -1,0 +1,6 @@
+.page {}
+
+
+@include breakpoint(md) {
+    .page {}
+}

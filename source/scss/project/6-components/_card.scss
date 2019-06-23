@@ -1,0 +1,157 @@
+/* -------------------------------- 
+
+Title: Card
+Descr: Container of information used as teasers for further content, often displayed in a gallery of related items
+
+-------------------------------- */
+
+.card {
+    // box-shadow: var(--shadow-md);
+    // border: 1px solid var(--color-accent-secondary);
+    display: block;
+    // border-radius: 0.25em;
+    // overflow: hidden;
+    // min-width: 170px;
+    // max-width: 170px; 
+    // min-height: 130px;
+}
+
+.card__img {
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.card__img--moveTop {
+    margin-top: var(--n-space-sm);
+    margin-right: var(--n-space-sm);
+    margin-left: var(--n-space-sm);
+}
+
+.card__img--no-jump { // prevent jump while img is loading
+    position: relative;
+    height: 0;
+    padding-bottom: 67.5%; // image ratio -> height/width*100
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.card__content {
+    // padding: var(--space-xs);
+    font-size: var(--text-xs);
+}
+
+.card__title {
+    font-weight: 700;
+}
+
+.card__description {
+    // font-size: var(--text-sm);
+    line-height: 1.4;
+    color: var(--color-contrast-medium);
+}
+
+.card--shadow {
+    box-shadow: var(--shadow-lg);
+}
+
+// --link
+.card--is-link {
+    will-change: box-shadow;
+    // transition: box-shadow var(--duration) var(--ease-in-out);
+    transition: all var(--duration-fast) var(--ease-in-out);
+    
+    &:hover {
+        box-shadow: var(--shadow-lg);
+        
+        .card__img::after {
+            opacity: 1;
+        }
+    }
+    
+    .card__img {
+        position: relative;
+        
+        &::after { // overlay layer
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: alpha(var(--color-black), 0.6);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    }
+}
+
+
+.card__link {
+    color: inherit;
+
+    .img,
+    .bg-img {
+        transition: all 2.5s var(--cubic-out);
+        will-change: transform;
+    }
+
+    i,
+    svg {
+        transition: all var(--duration-fast) var(--cubic-out);
+        
+        &:hover {
+            transform: scale3d(1.4, 1.4, 1); 
+        }
+    }
+
+    &:hover {
+        i,
+        svg {
+            transform: scale3d(1.2, 1.2, 1); 
+            transition: all var(--duration) var(--cubic-in);
+        }
+
+        .img,
+        .bg-img  {
+            transform: rotate(2deg) scale3d(1.2, 1.2, 1); 
+            transition: all 5s var(--cubic-in);
+        }
+    }
+}
+
+.card__link-icon {
+    position: absolute;
+    z-index: 1;
+    width: 64px;
+    height: 64px;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    // background-color: var(--color-black);
+    // border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+    transition: opacity 0.2s;
+    
+    .icon {
+        display: block;
+        width: 32px;
+        height: 32px;
+        color: var(--color-white); // icon color
+    }
+}
+
+.card--is-link:hover .card__link-icon {
+    opacity: 1;
+}
+

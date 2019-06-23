@@ -1,0 +1,276 @@
+$styleguide-navigation-width: 180px;
+
+// CONFIGURE VIEWING GRID 
+.styleguide__grid-view {
+    position: absolute;
+    left: var(--space-md)/2;
+    right: var(--space-md)/2; 
+    top:var(--space-md) + 5rem;    
+    bottom: var(--space-md);
+    
+    &:after,
+    &:before {
+        content: "";
+        top:0;
+        left:0;
+        bottom:0; 
+        position: absolute; 
+    } 
+    
+    &:before {
+        border-right: 1px solid #5ae6d326;         
+        right: var(--space-md)/2 !important;   
+    }
+    
+    &:after {
+        border-left: 1px solid #5ae6d326;         
+        left: var(--space-md)/2 !important;    
+    }
+}
+
+.styleguide__grid-viewLine {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: 1px solid #5ae6d326; 
+}
+
+
+.nav-styleguide + [data-section-name*="styleguide"] {
+    margin-top: 80px;      
+}
+
+// NAVIGATION
+.nav-styleguide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;  
+    width: 100%; 
+    display: flex;
+    align-items: center;  
+    background-color: black;
+    padding: 10px;
+    overflow-x: auto;  
+    flex-wrap: nowrap;
+    z-index: 10; 
+    &::-webkit-scrollbar {  
+        display: none; 
+    }
+} 
+
+.styleguide-columns {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+	border: 2px solid var(--color-contrast-lower);
+	
+	> * {
+		padding-bottom: 100%;
+	}
+}
+
+ 
+// STYLEGUIDE-GRID
+[data-section-name="styleguide-grid"] {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    .section__inner {
+        height: 100%;
+    }
+
+    &:target {
+        display: block;
+    }
+}
+
+.styleguide__nav-grid {
+    position: fixed;
+    z-index: 11;  
+    top: var(--space-md)/4 + 5rem;    
+    right: 0;
+    margin-bottom: var(--space-md);  
+}   
+
+.styleguide__nav-grid .btn {
+    font-size: 10px;       
+    text-transform: uppercase;
+    padding: 10px 15px !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+ 
+    &:hover,
+    &:active, 
+    &:focus {
+        color: #FFF !important;       
+    }
+}
+
+.styleguide__nav-grid .dropdown-toggle::after {
+   content: none; 
+}
+
+.styleguide__nav-grid .dropdown-menu.show {  
+    border-top-right-radius: 0; 
+    font-size: 12px;
+    text-transform: uppercase;
+    width: $styleguide-navigation-width;
+}  
+ 
+.styleguide__nav-grid .dropdown-item { 
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+    }
+}
+
+.nav-styleguide__brand {
+    display: block;
+    max-width: 100px;
+    padding: 0;
+    margin-right: 15px;  
+    width: 80px;
+}   
+
+.nav-styleguide .nav-item {
+    margin: 0; 
+}
+ 
+.nav-styleguide .nav-link {
+    color: var(--color-accent-light);    
+    border-radius: 0;
+    background: transparent;
+    border: none; 
+    padding-left: 0; 
+    transition: all var(--duration-fast) ease-in-out; 
+    font-size: 12px;    
+    text-transform: uppercase;
+    font-weight: 700;  
+    white-space: nowrap; 
+    text-decoration: none;
+    margin-right: var(--space-md);
+    
+    &:focus,
+    &:active,
+    &:hover {
+        color: #FFF; 
+    }
+} 
+
+.nav-styleguide .active.nav-link {
+    background: transparent;
+    color: #FFF; 
+} 
+
+
+@include breakpoint(lg) {  
+
+    // SECTION
+    [data-section-name*="styleguide"] {
+        padding-left: $styleguide-navigation-width; 
+    }
+    
+    .styleguide__grid-view {
+        top:var(--space-md);
+    }
+     
+    // NAVIGATION
+    .nav-styleguide {
+        flex-direction: column;
+        justify-content: center; 
+        align-items: flex-start;  
+        padding: 20px;  
+        width: $styleguide-navigation-width;
+        min-height: 500px; 
+        height: 100%;  
+    }
+    
+    .nav-styleguide__brand {
+        width: auto;
+        position: absolute;  
+        top:  0;
+        left: 0;
+        max-width: 100px;
+        padding: 0;
+        margin-top: 40px;
+        margin-left: 20px;
+    }   
+    
+    .styleguide__nav-grid {
+        top: auto; 
+        bottom: 0;
+        right: auto;
+        margin-right: 0;
+        margin-bottom: 40px;
+        left: 0;
+        margin-left: 20px; 
+    }  
+    
+    .styleguide__nav-grid .dropdown-menu.show {  
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 0; 
+    }
+    
+    .styleguide__nav-grid .btn {
+        font-size: 12px;   
+        border-top-right-radius: 5px; 
+        border-bottom-right-radius: 5px;
+    } 
+}
+
+// TRUMPS STYLEGUIDE
+
+// THEMES
+[data-section-name="styleguide-themes"] .section__inner {
+    max-width: 100%;
+    width: 100%;
+}
+
+[data-section-name="styleguide-themes"] main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+ 
+.styleguide-group-buttons .btn {
+    display: block;
+    width: 100%;
+}
+
+
+
+
+// PAGE UTILITIES
+.styleguide__item__label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.styleguide__scale {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+}
+
+.styleguide__item__preview {
+    background-color: var(--color-primary);
+    height: 40px;
+}
+
+.styleguide__component {
+    background-color: var(--color-contrast-low);
+    padding: 1.25em;
+    padding: var(--component-padding);
+}
+
+.styleguide__component__inner {
+    background-color: var(--color-contrast-medium);
+    height: 200px;
+}

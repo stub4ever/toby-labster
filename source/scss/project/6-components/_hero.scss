@@ -1,0 +1,44 @@
+.hero {
+    background-size: cover;
+}
+
+.hero--fullHeight {
+    height: 100vh;
+}
+
+.hero--halfHeight {
+    height: 50vh;
+}
+
+.hero--75Height {
+    height: 75vh;
+}
+
+.hero--maxScale400 { max-height: 400px;}
+.hero--maxScale500 { max-height: 500px;}
+.hero--maxScale550 { max-height: 550px;}
+.hero--maxScale600 { max-height: 600px;}
+.hero--maxScale650 { max-height: 650px;}
+.hero--maxScale700 { max-height: 700px;}
+.hero--maxScale800 { max-height: 800px;}
+
+
+@include breakpoint(md){
+    .hero--md-fullHeider { height: calc(100vh - 67px); }
+    .hero--md-fullHeight { height: 100vh; }
+
+    .hero--md-maxScaleNone { max-height: none; }
+    .hero--mpd-maxScale400 { max-height: 400px;}
+    .hero--md-maxScale500 { max-height: 500px;}
+    .hero--md-maxScale550 { max-height: 550px;}
+    .hero--md-maxScale600 { max-height: 600px;}
+    .hero--md-maxScale650 { max-height: 650px;}
+    .hero--md-maxScale700 { max-height: 700px;}
+    .hero--md-maxScale800 { max-height: 800px;}
+    .hero--md-maxScale900 { max-height: 900px;}
+    .hero--md-maxScale1000 { max-height: 1000px;}
+}
+
+@include breakpoint(lg){
+    .hero--lg-fullHeider { height: calc(100vh - 67px); }
+}

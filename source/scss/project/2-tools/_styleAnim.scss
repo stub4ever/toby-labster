@@ -1,0 +1,508 @@
+// CORE ANIMATION SETTINGS
+$style-anim-total-stagger: 10; // Total animation element staggering
+$style-anim-duration: .8s;
+$style-anim-delay: .1s;
+$style-anim-timing-function: var(--cubic-out);
+
+:root {
+    // Moving settings
+    --style-anim-top-y: var(--space-md);
+    --style-anim-right-x: var(--space-md);
+    --style-anim-bottom-y: var(--space-md);
+    --style-anim-left-x: var(--space-md);
+    
+    
+    --style-anim-top-out-y: var(--space-sm);
+    --style-anim-right-out-x: var(--space-sm);
+    --style-anim-bottom-out-y: var(--space-sm);
+    --style-anim-left-out-x: var(--space-sm);
+    
+    // Scaling setting
+    --style-anim-start-scale: 0.8;
+    
+    --style-anim-duration: $style-anim-duration;
+    --style-anim-delay: $style-anim-delay; // Delayed starts at .3 plus increment per .1s;
+    --style-anim-timing-function: $style-anim-timing-function;
+}
+
+
+// GLOBAL ANIMATION - INITIALIZE
+
+[data-scrolled-section].is--visible {
+    animation-name: translateInUp;
+    animation-duration: .6;
+}
+
+
+[class*="styleAnim"] {
+    animation-timing-function: $style-anim-timing-function;
+    animation-duration: $style-anim-duration;
+    animation-fill-mode: both;
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity, transform, visibility;
+}
+
+.is--visible [class*="styleAnim"] { // reveal element when it enters the viewport
+    opacity: 1;
+    visibility: visible;
+    animation-duration: $style-anim-duration; 
+}
+
+.is--invisible [class*="styleAnim"] { // reveal element when it enters the viewport
+    opacity: 0;
+    visibility: hidden;
+    animation-duration: ($style-anim-duration - ($style-anim-total-stagger * .1s)) + .1s;
+}
+
+
+@for $i from 1 through $style-anim-total-stagger { // Skip order 1
+    
+    // STAGGERING ANIMATION FADE IN
+    .is--visible [data-styleAnim-order="#{$i}"]  {
+        animation-duration: ($style-anim-duration - ($style-anim-delay * $i) + $style-anim-delay) ; 
+        animation-delay: ($style-anim-delay * $i) - $style-anim-delay; 
+        // animation-name: scaleIn;
+    }
+    
+    // STAGGERING ANIMATION FADE OUT
+    .is--invisible [data-styleAnim-order="#{$i}"] {
+        animation-duration: ($style-anim-duration - ($style-anim-total-stagger * .1s)) + (.2s * $i);
+        animation-delay: ($style-anim-total-stagger * .1s) - (.1s * $i);
+        animation-name: translateOut;
+    }
+}
+
+.is--visible [data-styleAnim-order="1"] {
+    animation-duration: $style-anim-duration; 
+    animation-delay: 0s; 
+}
+
+.is--invisible [data-styleAnim-order="1"] {
+    animation-duration: $style-anim-duration / 2; 
+    animation-delay: 0s; 
+}
+
+
+
+.is--visible [class*="translateIn"] { animation-name: translateIn; }            // TRANSLATE-IN-UP
+.is--visible [class*="translateInUp"] { animation-name: translateInUp; }            // TRANSLATE-IN-UP
+.is--visible [class*="translateInRight"] { animation-name: translateInRight; }      // TRANSLATE-IN-RIGHT
+.is--visible [class*="translateInDown"] { animation-name: translateInDown; }        // TRANSLATE-IN-DOWN
+.is--visible [class*="translateInLeft"] { animation-name: translateInLeft; }        // TRANSLATE-IN-LEFT
+
+.is--invisible [class*="translateOut"] { animation-name: translateOut; }        // TRANSLATE-OUT-UP    
+.is--invisible [class*="translateOutUp"] { animation-name: translateOutUp; }        // TRANSLATE-OUT-UP    
+.is--invisible [class*="translateOutRight"] { animation-name: translateOutRight; }  // TRANSLATE-OUT-RIGHT
+.is--invisible [class*="translateOutDown"] { animation-name: translateOutDown; }    // TRANSLATE-OUT-DOWN
+.is--invisible [class*="translateOutLeft"] { animation-name: translateOutLeft; }    // TRANSLATE-OUT-LEFT
+
+.is--visible [class*="scaleIn"] { animation-name: scaleIn; }                        // SCALE-IN
+.is--visible [class*="scaleInUp"] { animation-name: scaleInUp; }                    // SCALE-IN-UP
+.is--visible [class*="scaleInRight"] { animation-name: scaleInRight; }              // SCALE-IN-RIGHT
+.is--visible [class*="scaleInDown"] { animation-name: scaleInDown; }                // SCALE-IN-DOWN
+.is--visible [class*="scaleInLeft"] { animation-name: scaleInLeft; }                // SCALE-IN-LEFT
+
+.is--invisible [class*="scaleOut"] { animation-name: scaleOut; }                    // SCALE-OUT   
+.is--invisible [class*="scaleOutUp"] { animation-name: scaleOutUp; }                // SCALE-OUT-UP    
+.is--invisible [class*="scaleOutRight"] { animation-name: scaleOutRight; }          // SCALE-OUT-RIGHT
+.is--invisible [class*="scaleOutDown"] { animation-name: scaleOutDown; }            // SCALE-OUT-DOWN
+.is--invisible [class*="scaleOutLeft"] { animation-name: scaleOutLeft; }            // SCALE-OUT-LEFT
+
+.is--visible [class*="scaleInVerTop"] { animation-name: scaleInVerTop; }            // SCALE-VERTICAL-TOP
+
+
+
+// DURATION
+.is--visible [data-styleAnim-delay="100"], .is-invisible [data-styleAnim-delay="100"] {animation-delay: .1s }
+.is--visible [data-styleAnim-delay="200"], .is-invisible [data-styleAnim-delay="200"] {animation-delay: .2s }
+.is--visible [data-styleAnim-delay="300"], .is-invisible [data-styleAnim-delay="300"] {animation-delay: .3s }
+.is--visible [data-styleAnim-delay="400"], .is-invisible [data-styleAnim-delay="400"] {animation-delay: .4s }
+.is--visible [data-styleAnim-delay="500"], .is-invisible [data-styleAnim-delay="500"] {animation-delay: .5s }
+.is--visible [data-styleAnim-delay="600"], .is-invisible [data-styleAnim-delay="600"] {animation-delay: .6s }
+.is--visible [data-styleAnim-delay="700"], .is-invisible [data-styleAnim-delay="700"] {animation-delay: .7s }
+.is--visible [data-styleAnim-delay="800"], .is-invisible [data-styleAnim-delay="800"] {animation-delay: .8s }
+.is--visible [data-styleAnim-delay="900"], .is-invisible [data-styleAnim-delay="900"] {animation-delay: .9s }
+.is--visible [data-styleAnim-delay="1000"], .is--invisible [data-styleAnim-delay="1000"] {animation-delay: 1s }
+.is--visible [data-styleAnim-delay="1100"], .is--invisible [data-styleAnim-delay="1100"] {animation-delay: 1.1s }
+.is--visible [data-styleAnim-delay="1200"], .is--invisible [data-styleAnim-delay="1200"] {animation-delay: 1.2s }
+
+.is--visible [data-styleAnim-duration="100"], .is--invisible [data-styleAnim-duration="100"] {animation-duration: .1s }
+.is--visible [data-styleAnim-duration="200"], .is--invisible [data-styleAnim-duration="200"] {animation-duration: .2s }
+.is--visible [data-styleAnim-duration="300"], .is--invisible [data-styleAnim-duration="300"] {animation-duration: .3s }
+.is--visible [data-styleAnim-duration="400"], .is--invisible [data-styleAnim-duration="400"] {animation-duration: .4s }
+.is--visible [data-styleAnim-duration="500"], .is--invisible [data-styleAnim-duration="500"] {animation-duration: .5s }
+.is--visible [data-styleAnim-duration="600"], .is--invisible [data-styleAnim-duration="600"] {animation-duration: .6s }
+.is--visible [data-styleAnim-duration="700"], .is--invisible [data-styleAnim-duration="700"] {animation-duration: .7s }
+.is--visible [data-styleAnim-duration="800"], .is--invisible [data-styleAnim-duration="800"] {animation-duration: .8s }
+.is--visible [data-styleAnim-duration="900"], .is--invisible [data-styleAnim-duration="900"] {animation-duration: .9s }
+.is--visible [data-styleAnim-duration="1000"], .is--invisible [data-styleAnim-duration="1000"] {animation-duration: 1s }
+.is--visible [data-styleAnim-duration="1100"], .is--invisible [data-styleAnim-duration="1100"] {animation-duration: 1.1s }
+.is--visible [data-styleAnim-duration="1200"], .is--invisible [data-styleAnim-duration="1200"] {animation-duration: 1.2s }
+.is--visible [data-styleAnim-duration="1200"], .is--invisible [data-styleAnim-duration="1300"] {animation-duration: 1.3s }
+.is--visible [data-styleAnim-duration="1200"], .is--invisible [data-styleAnim-duration="1400"] {animation-duration: 1.4s }
+.is--visible [data-styleAnim-duration="1200"], .is--invisible [data-styleAnim-duration="1500"] {animation-duration: 1.5s }
+
+
+///////////////////////////////////////////////////////////////////
+
+// TRANSLATE-IN
+
+@keyframes translateIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes translateInUp {
+    from {
+        transform: translate3d(0,var(--style-anim-top-y),0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+@keyframes translateInRight {
+    from {
+        transform: translate3d(var(--style-anim-right-x),0,0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+@keyframes translateInDown {
+    from {
+        transform: translate3d(0,calc(-1 * var(--style-anim-bottom-y)),0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes translateInLeft {
+    from {
+        transform: translate3d(calc(-1 * var(--style-anim-left-x)),0,0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// TRANSLATE OUT
+@keyframes translateOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes translateOutUp {
+    from {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        transform: translate3d(0,calc(-1 * var(--style-anim-top-out-y)),0);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes translateOutRight {
+    from {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        transform: translate3d(var(--style-anim-right-out-x),0,0);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes translateOutDown {
+    from {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        transform: translate3d(0,var(--style-anim-bottom-out-y),0);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes translateOutLeft {
+    from {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        transform: translate3d(calc(-1 * var(--style-anim-left-out-x)),0,0);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+///////////////////////////////////////////////////////////////////
+
+
+// SCALE-IN
+
+@keyframes scaleIn {
+    from {
+        transform: scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+@keyframes scaleInUp {
+    from {
+        transform: translate3d(0,var(--style-anim-top-y),0) scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        transform: translate3d(0,0,0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+@keyframes scaleInRight {
+    from {
+        transform: translate3d(var(--style-anim-right-x),0,0) scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        transform: translate3d(0,0,0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+@keyframes scaleInDown {
+    from {
+        transform: translate3d(0,calc(-1 * var(--style-anim-bottom-y)),0) scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        transform: translate3d(0,0,0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes scaleInLeft {
+    from {
+        transform: translate3d(calc(-1 * var(--style-anim-left-x)),0,0) scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    to {
+        transform: translate3d(0,0,0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+// SCALE-OUT
+
+@keyframes scaleOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        transform: scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes scaleOutUp {
+    from {
+        transform: translate3d(0,0,0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        transform: translate3d(0,calc(-1 * var(--style-anim-top-out-y)),0) scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes scaleOutRight {
+    from {
+        transform: translate3d(0,0,0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        transform: translate3d(var(--style-anim-right-out-x),0,0) scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes scaleOutDown {
+    from {
+        transform: translate3d(0,0,0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        transform: translate3d(0,var(--style-anim-bottom-out-y),0) scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes scaleOutLeft {
+    from {
+        transform: translate3d(0,0,0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    to {
+        transform: translate3d(calc(-1 * var(--style-anim-left-out-x)),0,0) scale(var(--style-anim-start-scale));
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+// SCALE-IN-VERTICAL
+
+@keyframes scaleInVerTop {
+    0% {
+        transform: scaleY(0);
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1);
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+
+/* -------------------------------- 
+
+Title: Reveal Effects
+Descr: A collection of reveal effects targeting specific elements as they enter the viewport
+
+-------------------------------- */
+
+
+// .js {
+    //     @include breakpoint(sm) { // effects are visible only past this breakpoint                
+        //         .reveal-fx--rotate, .reveal-fx--rotate-down, .reveal-fx--rotate-right, .reveal-fx--rotate-left, .reveal-fx--rotate-up { // ⚠️ add class to parent
+            //             perspective: 1000px;
+            
+            //             > * {
+                //                 transition: transform var(--reveal-fx-duration) var(--styleAnim-timing-function);
+                //             }
+                //         }
+                
+                //         .reveal-fx--rotate, .reveal-fx--rotate-down {
+                    //             > * {
+                        //                 transform-origin: top;
+                        //                 transform: rotateX(-45deg);
+                        //             }
+                        //         }
+                        
+                        //         .reveal-fx--rotate-right {
+                            //             > * {
+                                //                 transform-origin: left center;
+                                //                 transform: rotateY(45deg);
+                                //             }
+                                //         }
+                                
+                                //         .reveal-fx--rotate-left {
+                                    //             > * {
+                                        //                 transform-origin: right center;
+                                        //                 transform: rotateY(-45deg);
+                                        //             }
+                                        //         }
+                                        
+                                        //         .reveal-fx--rotate-up {
+                                            //             > * {
+                                                //                 transform-origin: bottom;
+                                                //                 transform: rotateX(45deg);
+                                                //             }
+                                                //         }
+                                                //     }
+                                                // }
