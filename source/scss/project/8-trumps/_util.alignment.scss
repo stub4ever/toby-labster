@@ -4,182 +4,182 @@
 
 // --------------------------------
 
-.flex { display: flex; }
-.inline-flex { display: inline-flex; }
+.flex { display: flex !important; }
+.inline-flex { display: inline-flex !important; }
 
-.flex-wrap { flex-wrap: wrap; }
-.flex-column { flex-direction: column; }
-.flex-row { flex-direction: row; }
-.flex-center { justify-content: center; align-items: center; }
-.justify-start { justify-content: flex-start; }
-.justify-end { justify-content: flex-end; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.items-center { align-items: center; }
-.items-start { align-items: flex-start; }
-.items-end { align-items: flex-end; }
+.flex-wrap { flex-wrap: wrap !important; }
+.flex-column { flex-direction: column !important; }
+.flex-row { flex-direction: row !important; }
+.flex-center { justify-content: center; align-items: center !important; }
+.justify-start { justify-content: flex-start !important; }
+.justify-end { justify-content: flex-end !important; }
+.justify-center { justify-content: center !important; }
+.justify-between { justify-content: space-between !important; }
+.items-center { align-items: center !important; }
+.items-start { align-items: flex-start !important; }
+.items-end { align-items: flex-end !important; }
 
 @include breakpoint(xs) {
-    .flex-wrap\@xs { flex-wrap: wrap; }
-    .flex-column\@xs { flex-direction: column; }
-    .flex-row\@xs { flex-direction: row; }
-    .flex-center\@xs { justify-content: center; align-items: center; }
-    .justify-start\@xs { justify-content: flex-start; }
-    .justify-end\@xs { justify-content: flex-end; }
-    .justify-center\@xs { justify-content: center; }
-    .justify-between\@xs { justify-content: space-between; }
-    .items-center\@xs { align-items: center; }
-    .items-start\@xs { align-items: flex-start; }
-    .items-end\@xs { align-items: flex-end; }
+    .flex-wrap\@xs { flex-wrap: wrap !important; }
+    .flex-column\@xs { flex-direction: column !important; }
+    .flex-row\@xs { flex-direction: row !important; }
+    .flex-center\@xs { justify-content: center; align-items: center !important; }
+    .justify-start\@xs { justify-content: flex-start !important; }
+    .justify-end\@xs { justify-content: flex-end !important; }
+    .justify-center\@xs { justify-content: center !important; }
+    .justify-between\@xs { justify-content: space-between !important; }
+    .items-center\@xs { align-items: center !important; }
+    .items-start\@xs { align-items: flex-start !important; }
+    .items-end\@xs { align-items: flex-end !important; }
 }
 
 @include breakpoint(sm) {
-    .flex-wrap\@sm { flex-wrap: wrap; }
-    .flex-column\@sm { flex-direction: column; }
-    .flex-row\@sm { flex-direction: row; }
-    .flex-center\@sm { justify-content: center; align-items: center; }
-    .justify-start\@sm { justify-content: flex-start; }
-    .justify-end\@sm { justify-content: flex-end; }
-    .justify-center\@sm { justify-content: center; }
-    .justify-between\@sm { justify-content: space-between; }
-    .items-center\@sm { align-items: center; }
-    .items-start\@sm { align-items: flex-start; }
-    .items-end\@sm { align-items: flex-end; }
+    .flex-wrap\@sm { flex-wrap: wrap !important; }
+    .flex-column\@sm { flex-direction: column !important; }
+    .flex-row\@sm { flex-direction: row !important; }
+    .flex-center\@sm { justify-content: center; align-items: center !important; }
+    .justify-start\@sm { justify-content: flex-start !important; }
+    .justify-end\@sm { justify-content: flex-end !important; }
+    .justify-center\@sm { justify-content: center !important; }
+    .justify-between\@sm { justify-content: space-between !important; }
+    .items-center\@sm { align-items: center !important; }
+    .items-start\@sm { align-items: flex-start !important; }
+    .items-end\@sm { align-items: flex-end !important; }
 }
 
 @include breakpoint(md) {
-    .flex-wrap\@md { flex-wrap: wrap; }
-    .flex-column\@md { flex-direction: column; }
-    .flex-row\@md { flex-direction: row; }
-    .flex-center\@md { justify-content: center; align-items: center; }
-    .justify-start\@md { justify-content: flex-start; }
-    .justify-end\@md { justify-content: flex-end; }
-    .justify-center\@md { justify-content: center; }
-    .justify-between\@md { justify-content: space-between; }
-    .items-center\@md { align-items: center; }
-    .items-start\@md { align-items: flex-start; }
-    .items-end\@md { align-items: flex-end; }
+    .flex-wrap\@md { flex-wrap: wrap !important; }
+    .flex-column\@md { flex-direction: column !important; }
+    .flex-row\@md { flex-direction: row !important; }
+    .flex-center\@md { justify-content: center; align-items: center !important; }
+    .justify-start\@md { justify-content: flex-start !important; }
+    .justify-end\@md { justify-content: flex-end !important; }
+    .justify-center\@md { justify-content: center !important; }
+    .justify-between\@md { justify-content: space-between !important; }
+    .items-center\@md { align-items: center !important; }
+    .items-start\@md { align-items: flex-start !important; }
+    .items-end\@md { align-items: flex-end !important; }
 }
 
 @include breakpoint(lg) {
-    .flex-wrap\@lg { flex-wrap: wrap; }
-    .flex-column\@lg { flex-direction: column; }
-    .flex-row\@lg { flex-direction: row; }
-    .flex-center\@lg { justify-content: center; align-items: center; }
-    .justify-start\@lg { justify-content: flex-start; }
-    .justify-end\@lg { justify-content: flex-end; }
-    .justify-center\@lg { justify-content: center; }
-    .justify-between\@lg { justify-content: space-between; }
-    .items-center\@lg { align-items: center; }
-    .items-start\@lg { align-items: flex-start; }
-    .items-end\@lg { align-items: flex-end; }
+    .flex-wrap\@lg { flex-wrap: wrap !important; }
+    .flex-column\@lg { flex-direction: column !important; }
+    .flex-row\@lg { flex-direction: row !important; }
+    .flex-center\@lg { justify-content: center; align-items: center !important; }
+    .justify-start\@lg { justify-content: flex-start !important; }
+    .justify-end\@lg { justify-content: flex-end !important; }
+    .justify-center\@lg { justify-content: center !important; }
+    .justify-between\@lg { justify-content: space-between !important; }
+    .items-center\@lg { align-items: center !important; }
+    .items-start\@lg { align-items: flex-start !important; }
+    .items-end\@lg { align-items: flex-end !important; }
 }
 
 @include breakpoint(xl) {
-    .flex-wrap\@xl { flex-wrap: wrap; }
-    .flex-column\@xl { flex-direction: column; }
-    .flex-row\@xl { flex-direction: row; }
-    .flex-center\@xl { justify-content: center; align-items: center; }
-    .justify-start\@xl { justify-content: flex-start; }
-    .justify-end\@xl { justify-content: flex-end; }
-    .justify-center\@xl { justify-content: center; }
-    .justify-between\@xl { justify-content: space-between; }
-    .items-center\@xl { align-items: center; }
-    .items-start\@xl { align-items: flex-start; }
-    .items-end\@xl { align-items: flex-end; }
+    .flex-wrap\@xl { flex-wrap: wrap !important; }
+    .flex-column\@xl { flex-direction: column !important; }
+    .flex-row\@xl { flex-direction: row !important; }
+    .flex-center\@xl { justify-content: center; align-items: center !important; }
+    .justify-start\@xl { justify-content: flex-start !important; }
+    .justify-end\@xl { justify-content: flex-end !important; }
+    .justify-center\@xl { justify-content: center !important; }
+    .justify-between\@xl { justify-content: space-between !important; }
+    .items-center\@xl { align-items: center !important; }
+    .items-start\@xl { align-items: flex-start !important; }
+    .items-end\@xl { align-items: flex-end !important; }
 }
 
 // children
-.flex-grow { flex-grow: 1; }
-.flex-shrink-0 { flex-shrink: 0; }
+.flex-grow { flex-grow: 1 !important; }
+.flex-shrink-0 { flex-shrink: 0 !important; }
 
 // set gap
 .flex-gap-xxxs {
-    margin-bottom: calc(-1 * var(--space-xxxs));
-    margin-left: calc(-1 * var(--space-xxxs));
+    margin-bottom: calc(-1 * var(--space-xxxs))!important;;
+    margin-left: calc(-1 * var(--space-xxxs))!important;;
     
     > * {
-        margin-bottom: var(--space-xxxs);
-        margin-left: calc(var(--space-xxxs));
+        margin-bottom: var(--space-xxxs)!important;;
+        margin-left: calc(var(--space-xxxs))!important;;
     }
 }
 
 .flex-gap-xxs {
-    margin-bottom: calc(-1 * var(--space-xxs));
-    margin-left: calc(-1 * var(--space-xxs));
+    margin-bottom: calc(-1 * var(--space-xxs))!important;;
+    margin-left: calc(-1 * var(--space-xxs))!important;;
     
     > * {
-        margin-bottom: var(--space-xxs);
-        margin-left: calc(var(--space-xxs));
+        margin-bottom: var(--space-xxs)!important;;
+        margin-left: calc(var(--space-xxs))!important;;
     }
 }
 
 .flex-gap-xs {
-    margin-bottom: calc(-1 * var(--space-xs));
-    margin-left: calc(-1 * var(--space-xs));
+    margin-bottom: calc(-1 * var(--space-xs))!important;;
+    margin-left: calc(-1 * var(--space-xs))!important;;
     
     > * {
-        margin-bottom: var(--space-xs);
-        margin-left: calc(var(--space-xs));
+        margin-bottom: var(--space-xs)!important;;
+        margin-left: calc(var(--space-xs))!important;;
     }
 }
 
 .flex-gap-sm {
-    margin-bottom: calc(-1 * var(--space-sm));
-    margin-left: calc(-1 * var(--space-sm));
+    margin-bottom: calc(-1 * var(--space-sm))!important;;
+    margin-left: calc(-1 * var(--space-sm))!important;;
     
     > * {
-        margin-bottom: var(--space-sm);
-        margin-left: calc(var(--space-sm));
+        margin-bottom: var(--space-sm)!important;;
+        margin-left: calc(var(--space-sm))!important;;
     }
 }
 
 .flex-gap-md {
-    margin-bottom: calc(-1 * var(--space-md));
-    margin-left: calc(-1 * var(--space-md));
+    margin-bottom: calc(-1 * var(--space-md))!important;;
+    margin-left: calc(-1 * var(--space-md))!important;;
     
     > * {
-        margin-bottom: var(--space-md);
-        margin-left: calc(var(--space-md));
+        margin-bottom: var(--space-md)!important;;
+        margin-left: calc(var(--space-md))!important;;
     }
 }
 
 .flex-gap-lg {
-    margin-bottom: calc(-1 * var(--space-lg));
-    margin-left: calc(-1 * var(--space-lg));
+    margin-bottom: calc(-1 * var(--space-lg))!important;;
+    margin-left: calc(-1 * var(--space-lg))!important;;
     
     > * {
-        margin-bottom: var(--space-lg);
-        margin-left: calc(var(--space-lg));
+        margin-bottom: var(--space-lg)!important;;
+        margin-left: calc(var(--space-lg))!important;;
     }
 }
 
 .flex-gap-xl {
-    margin-bottom: calc(-1 * var(--space-xl));
-    margin-left: calc(-1 * var(--space-xl));
+    margin-bottom: calc(-1 * var(--space-xl))!important;;
+    margin-left: calc(-1 * var(--space-xl))!important;;
     
     > * {
-        margin-bottom: var(--space-xl);
-        margin-left: calc(var(--space-xl));
+        margin-bottom: var(--space-xl)!important;;
+        margin-left: calc(var(--space-xl))!important;;
     }
 }
 
 .flex-gap-xxl {
-    margin-bottom: calc(-1 * var(--space-xxl));
-    margin-left: calc(-1 * var(--space-xxl));
+    margin-bottom: calc(-1 * var(--space-xxl))!important;;
+    margin-left: calc(-1 * var(--space-xxl))!important;;
     
     > * {
-        margin-bottom: var(--space-xxl);
-        margin-left: calc(var(--space-xxl));
+        margin-bottom: var(--space-xxl)!important;;
+        margin-left: calc(var(--space-xxl))!important;;
     }
 }
 
 .flex-gap-xxxl {
-    margin-bottom: calc(-1 * var(--space-xxxl));
-    margin-left: calc(-1 * var(--space-xxxl));
+    margin-bottom: calc(-1 * var(--space-xxxl))!important;;
+    margin-left: calc(-1 * var(--space-xxxl))!important;;
     
     > * {
-        margin-bottom: var(--space-xxxl);
-        margin-left: calc(var(--space-xxxl));
+        margin-bottom: var(--space-xxxl)!important;;
+        margin-left: calc(var(--space-xxxl))!important;;
     }
 }

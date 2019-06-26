@@ -4,22 +4,72 @@
 
 // --------------------------------
 
-.width-50\% { width: 50%; }
-.width-100\% { width: 100%; }
+.width-50\% { width: 50% !important; }
+.width-100\% { width: 100% !important; }
 
-.height-50\% { height: 50%; }
-.height-100\% { height: 100%; }
+.height-50\% { height: 50% !important; }
+.height-100\% { height: 100% !important; }
 
-.width-max-200 { max-width: 200px; }
-.width-max-300 { max-width: 300px; }
-.width-max-400 { max-width: 400px; }
-.width-max-500 { max-width: 500px; }
-.width-max-600 { max-width: 600px; }
-.width-max-700 { max-width: 700px; }
-.width-max-800 { max-width: 800px; }
-.width-max-900 { max-width: 900px; }
+.width-max-200 { max-width: 200px !important; }
+.width-max-300 { max-width: 300px !important; }
+.width-max-400 { max-width: 400px !important; }
+.width-max-500 { max-width: 500px !important; }
+.width-max-600 { max-width: 600px !important; }
+.width-max-700 { max-width: 700px !important; }
+.width-max-800 { max-width: 800px !important; }
+.width-max-900 { max-width: 900px !important; }
 
 
+.max-width-xxs { max-width: var(--max-width-xxs) !important; }
+.max-width-xs  { max-width: var(--max-width-xs) !important; }
+.max-width-sm  { max-width: var(--max-width-sm) !important; }
+.max-width-md  { max-width: var(--max-width-md) !important; }
+.max-width-lg  { max-width: var(--max-width-lg) !important; }
+.max-width-xl  { max-width: var(--max-width-xl) !important; }
+.max-width-xxl { max-width: var(--max-width-xxl) !important; }
+
+
+// alt approach - max-width is updated at specific breakpoints
+.max-width-adaptive-sm {
+    max-width: var(--max-width-xs) !important;
+    
+    @include breakpoint(md) {
+        max-width: var(--max-width-sm) !important;
+    }
+}
+
+.max-width-adaptive-md {
+    max-width: var(--max-width-xs) !important;
+    
+    @include breakpoint(md) {
+        max-width: var(--max-width-md) !important;
+    }
+}
+
+.max-width-adaptive,
+.max-width-adaptive-lg {
+    max-width: var(--max-width-xs) !important;
+    
+    @include breakpoint(md) {
+        max-width: var(--max-width-md) !important;
+    }
+    
+    @include breakpoint(xl) {
+        max-width: var(--max-width-lg) !important;
+    }
+}
+
+.max-width-adaptive-xl {
+    max-width: var(--max-width-xs) !important;
+    
+    @include breakpoint(md) {
+        max-width: var(--max-width-md) !important;
+    }
+    
+    @include breakpoint(xl) {
+        max-width: var(--max-width-xl) !important;
+    }
+}
 
 /////////////////////////
 //
@@ -40,30 +90,30 @@ $size-fractions: 1 2 3 4 5 !default;
 $size-offsets: true;
 
 @mixin sizes($columns, $breakpoint: null) {
-
+    
     // Loop through the number of columns for each denominator of our fractions.
     @each $denominator in $columns {
-
+        
         // Begin creating a numerator for our fraction up until we hit the
         // denominator.
         @for $numerator from 1 through $denominator {
-
+            
             // Build a class in the format `.w3/4[@<breakpoint>]`.
             .width#{$breakpoint}-#{$numerator}\/#{$denominator} {
-                width: ($numerator / $denominator) * 100%;
-                max-width: ($numerator / $denominator) * 100%;
+                width: ($numerator / $denominator) * 100% !important;
+                max-width: ($numerator / $denominator) * 100% !important;
             }
-
+            
             @if ($size-offsets == true) {
                 // Build a class in the format `.w-push1/2[@<breakpoint>]`.
                 .width-push#{$breakpoint}-#{$numerator}\/#{$denominator} {
-                    margin-left: ($numerator / $denominator) * 100%;
+                    margin-left: ($numerator / $denominator) * 100% !important;
                 }    
-            
+                
                 .width-pull#{$breakpoint}-#{$numerator}\/#{$denominator} {
-                    margin-right: ($numerator / $denominator) * 100%;
+                    margin-right: ($numerator / $denominator) * 100% !important;
                 }    
-
+                
             }
         }
     }

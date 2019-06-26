@@ -21,13 +21,13 @@
 
 
 // Images
-.filter-gray { filter: grayscale(100%); }
+.filter-gray { filter: grayscale(100%) !important; }
 
 // Elements
-.overflow-hidden { overflow: hidden; }
-.overflow-visible { overflow: visible; }
+.overflow-hidden { overflow: hidden !important; }
+.overflow-visible { overflow: visible !important; }
 
-.order-top { position: relative; z-index:1; }
-.display-block { display: block; }
-.display-inline { display: inline; }
+.order-top { position: relative; z-index:1 !important; }
+.display-block { display: block !important; }
+.display-inline { display: inline !important; }
 

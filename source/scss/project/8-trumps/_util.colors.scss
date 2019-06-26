@@ -4,15 +4,15 @@
 
 // --------------------------------
 
-.color-inherit { color: inherit; }
-.color-contrast-medium { color: var(--color-contrast-medium, hsl(240, 1%, 48%)); }
-.color-contrast-high { color: var(--color-contrast-high, hsl(240, 4%, 20%)); }
-.color-contrast-higher { color: var(--color-contrast-higher, hsl(240, 8%, 12%)); }
-.color-primary { color: var(--color-primary, hsl(220, 90%, 56%)); }
-.color-accent { color: var(--color-accent, hsl(355, 90%, 61%)); }
-.color-success { color: var(--color-success, hsl(94, 48%, 56%)); }
-.color-warning { color: var(--color-warning, hsl(46, 100%, 61%)); }
-.color-error { color: var(--color-error, hsl(355, 90%, 61%)); }
+.color-inherit { color: inherit !important; }
+.color-contrast-medium { color: var(--color-contrast-medium, hsl(240, 1%, 48%)) !important; }
+.color-contrast-high { color: var(--color-contrast-high, hsl(240, 4%, 20%)) !important; }
+.color-contrast-higher { color: var(--color-contrast-higher, hsl(240, 8%, 12%)) !important; }
+.color-primary { color: var(--color-primary, hsl(220, 90%, 56%)) !important; }
+.color-accent { color: var(--color-accent, hsl(355, 90%, 61%)) !important; }
+.color-success { color: var(--color-success, hsl(94, 48%, 56%)) !important; }
+.color-warning { color: var(--color-warning, hsl(46, 100%, 61%)) !important; }
+.color-error { color: var(--color-error, hsl(355, 90%, 61%)) !important; }
 
 
 // Gradient

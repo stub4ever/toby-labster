@@ -78,6 +78,7 @@
 
 // CORE - Update: 20/06/2019 ----------------------------
 @import 'project/5-objects/section';
+@import 'project/5-objects/grid-layout';
 @import 'project/5-objects/box';
 @import 'project/5-objects/flag';
 @import 'project/5-objects/crop';
@@ -87,6 +88,7 @@
 @import 'project/5-objects/pack';
 @import 'project/5-objects/bg-wrapper';
 @import 'project/5-objects/media-wrapper';
+
 
 // ------------------------------------------------------
 @import 'project/5-objects/5-objects'; // IMPORT NEW CUSTOM FILE INSIDE HERE
@@ -129,11 +131,11 @@
 @import 'project/8-trumps/util.spacing';
 @import 'project/8-trumps/util.alignment';
 @import 'project/8-trumps/util.visibility';
-@import 'project/8-trumps/util.shared-styles'; // Add Custom utilities here
+@import 'project/8-trumps/util.shared-styles'; 
 
 
 @import 'project/8-trumps/themes'; // Create layouts theme-color here
-@import 'project/8-trumps/overrides'; // if necessary to overrides classes here
+@import 'project/8-trumps/overrides'; // Park only nasty overriding here for temporary 
 // ------------------------------------------------------
 @import 'project/8-trumps/8-trumps';
 @import 'project/8-trumps/print'; // Print styling always at the end
